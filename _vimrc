@@ -19,8 +19,8 @@ filetype plugin indent on     " required
 
 Bundle 'Lokaltog/vim-powerline'
 " powerline config
-# let g:Powerline_symbols = 'fancy'
-# set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h16
+" let g:Powerline_symbols = 'fancy'
+" set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h16
 
 " indentation
 set autoindent
@@ -64,8 +64,6 @@ if has("gui_running")
   set guioptions=egmrt
 endif
 
-colorscheme Tomorrow
-
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 set wildignore+=*/tmp/*,*.scssc,*.sassc,*.class,*.DS_Store
 set wildignore+=*/vendor/bundle/*,*/server/*,*/public/system/*
@@ -74,3 +72,10 @@ set wildignore+=*theaterjobs*/vendor/*,*/web/bundles/*,*/app/cache/*,*/vendor/bu
 " eigene einstellungen
 set hlsearch
 autocmd BufWritePre * :%s/\s\+$//e
+
+" for lack of a better theme
+Bundle 'Zenburn'
+colorscheme zenburn
+
+" because escape is evil
+inoremap jk <esc>
