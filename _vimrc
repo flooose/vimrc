@@ -82,3 +82,7 @@ inoremap jk <esc>
 
 " use something like this as a starting point for finding tag at point
 " :nnoremap <2-LeftMouse> :exe "tag ". expand("<cword>")<CR>
+
+" make instert mode more usable
+imap <C-b> <C-O>:CtrlPBuffer<cr>
+imap <C-p> <C-O>:CtrlP<cr>
