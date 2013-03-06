@@ -86,3 +86,13 @@ inoremap jk <esc>
 " make instert mode more usable
 imap <C-b> <C-O>:CtrlPBuffer<cr>
 imap <C-p> <C-O>:CtrlP<cr>
+
+" make command  mode more usable
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+"cnoremap <A-b> <S-Left>
+"cnoremap <A-f> <S-Right>
