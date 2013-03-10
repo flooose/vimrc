@@ -9,7 +9,7 @@ set background=light
 set number
 " allow hiding modified buffers
 set hidden
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
