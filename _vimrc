@@ -7,6 +7,10 @@ filetype off                   " required!
 set laststatus=2
 set background=light
 set number
+
+" change leader
+let mapleader=","
+
 " allow hiding modified buffers
 set hidden
 set rtp+=~/.vim/vundle/
@@ -39,6 +43,8 @@ set nowritebackup
 
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-fugitive'
 
 Bundle 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<cr>
@@ -59,6 +65,12 @@ map ,T :call RunSpec("-l " . <C-r>=line('.')<CR>)<cr>
 " run full rspec file
 map ,t :call RunSpec("")<cr>
 
+noremap <silent> <Leader>h :wincmd h<CR>
+noremap <silent> <Leader>j :wincmd j<CR>
+noremap <silent> <Leader>k :wincmd k<CR>
+noremap <silent> <Leader>l :wincmd l<CR>
+noremap <silent> <Leader>q :close<CR>
+
  " macvim config
 if has("gui_running")
   set guioptions=egmrt
@@ -78,7 +90,7 @@ Bundle 'Zenburn'
 colorscheme zenburn
 
 " because escape is evil
-inoremap jk <esc>
+inoremap kj <esc>
 
 " use something like this as a starting point for finding tag at point
 " :nnoremap <2-LeftMouse> :exe "tag ". expand("<cword>")<CR>
