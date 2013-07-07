@@ -38,6 +38,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 
+
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'kchmck/vim-coffee-script'
@@ -46,6 +47,13 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'duff/vim-scratch'
 Bundle 'scrooloose/nerdtree'
+
+" color schemes
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'ciaranm/inkpot'
+Bundle 'vim-scripts/Gummybears'
+Bundle 'vim-scripts/desert-warm-256'
+
 map <C-n> :NERDTreeToggle<cr>
 map :nt :NERDTree
 map :test :w<cr> :!bundle exec rspec
@@ -72,6 +80,7 @@ noremap <silent> <Leader>q :close<CR>
 
  " macvim config
 if has("gui_running")
+  set guifont=Meslo\ LG\ S\ 12
   set guioptions=egmrt
 endif
 
