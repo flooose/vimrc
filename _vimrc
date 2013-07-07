@@ -1,9 +1,7 @@
 " general
 set encoding=utf-8
 set t_Co=256
-syntax on
 set nocompatible               " be iMproved
-filetype off                   " required!
 set laststatus=2
 set background=light
 set number
@@ -19,7 +17,6 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
-filetype plugin indent on     " required
 
 Bundle 'Lokaltog/vim-powerline'
 " powerline config
@@ -43,9 +40,11 @@ set nowritebackup
 
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
-
+Bundle 'tpope/vim-surround'
+Bundle 'duff/vim-scratch'
 Bundle 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<cr>
 map :nt :NERDTree
@@ -79,7 +78,6 @@ endif
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 set wildignore+=*/tmp/*,*.scssc,*.sassc,*.class,*.DS_Store
 set wildignore+=*/vendor/bundle/*,*/server/*,*/public/system/*
-set wildignore+=*theaterjobs*/vendor/*,*/web/bundles/*,*/app/cache/*,*/vendor/bundles*
 
 " eigene einstellungen
 set hlsearch
@@ -108,3 +106,13 @@ cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
 "cnoremap <A-b> <S-Left>
 "cnoremap <A-f> <S-Right>
+"
+syntax on
+filetype on
+filetype indent on
+filetype plugin on
+
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_clear_cache_on_exit = 1
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)|vendor/bundle|public/javascripts/compiled|node_modules|venv$'
