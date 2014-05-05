@@ -2,5 +2,6 @@ h2. Setup
 
 # clone the repository: @git clone https://github.com/flooose/vimrc.git@
 # Initialize Vundle submodule: @git submodule init && git submodule update@
+# ln -s ~/.vim/_vimrc ~/.vimrc
 # Start vim call @BundleInstall@
 
